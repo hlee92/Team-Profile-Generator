@@ -3,7 +3,10 @@ const fs = require("fs");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+
 const teamMembers = [];
+
+//import/require the page template and store in var
 
 
 // TODO: Create a function to initialize app
@@ -197,3 +200,7 @@ const addMoreOrExit = () => {
 };
 
 promptManager();
+
+//add a function to build the team/render template 
+//call teamMembers within render template 
+generateTeam();
