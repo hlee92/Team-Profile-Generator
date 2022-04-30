@@ -3,11 +3,11 @@ const fs = require("fs");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const makeTemplate = require("./src/template");
 
 const teamMembers = [];
 
 //import/require the page template and store in var
-
 
 // TODO: Create a function to initialize app
 const promptManager = () => {
@@ -151,12 +151,12 @@ const addEngineer = ({ name, email, id }) => {
     ])
     .then(({ github }) => {
       teamMembers.push(new Engineer(name, email, id, github));
-      return addMoreOrExit()
+      return addMoreOrExit();
     });
 };
 
 const addIntern = ({ name, email, id }) => {
-return inquirer
+  return inquirer
     .prompt([
       {
         type: "input",
@@ -174,9 +174,9 @@ return inquirer
     ])
     .then(({ school }) => {
       teamMembers.push(new Intern(name, email, id, school));
-      return addMoreOrExit()
+      return addMoreOrExit();
     });
-};   
+};
 
 const addMoreOrExit = () => {
   return inquirer
@@ -185,22 +185,20 @@ const addMoreOrExit = () => {
         type: "list",
         name: "continue",
         message: "Do you want to add another employee?",
-        choices: ["Yes","No, I'm done"]
+        choices: ["Yes", "No, I'm done"],
       },
     ])
-    .then(
-      (response) => {
-        if (response.continue === "Yes") {
-          return addEmployee();
-        }
-        else {
-          console.log(teamMembers)
-        }
+    .then((response) => {
+      if (response.continue === "Yes") {
+        return addEmployee();
+      } else {
+        fs.writeFileSync('teams.html', makeTemplate(teamMembers));
+      }
     });
 };
 
 promptManager();
 
-//add a function to build the team/render template 
-//call teamMembers within render template 
-generateTeam();
+//add a function to build the team/render template
+//call teamMembers within render template
+//generateTeam();
