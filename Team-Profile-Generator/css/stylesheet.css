@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+    color: rgb(140, 28, 28);;
+    padding: 10px;
+}
+
+.card-header {
+    color: rgb(80, 83, 83);
+    background: rgb(244, 236, 225);
+}
+
+.container {
+    padding: 20px;
+}
+
+.list-group-item:first-child {
+    color: rgb(140, 28, 28);
+}
+
+.list-group-item:last-child {
+    color: rgb(53, 165, 163);
+}
+
+.list-group-item {
+    color: rgb(85, 120, 235);
+}
+
