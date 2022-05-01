@@ -1,9 +1,9 @@
 # Team-Profile-Generator
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+The point of this challenge/assignment was to create a Team Profile Generator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+1. The point of this challenge/assignment was to create a Team Profile Generator that returns an HTML file with the given information. 
 
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+2. When the user initiates the terminal with node index.js, there's a series of required questions.
 
-[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
+3. After the user inputs all of the required information, an HTML file is generated with all of the information.
